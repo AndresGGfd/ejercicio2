@@ -1,0 +1,13 @@
+{
+  "name": "ejercicio2-git",
+  "version": "1.0.0",
+  "description": "Calculadora científica - Ejercicio 2 Git colaborativo",
+  "scripts": {
+    "start": "ts-node aritmetica.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}
