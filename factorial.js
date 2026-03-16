@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const readline = require("readline");
 
 function factorial(numero) {
@@ -20,4 +21,28 @@ rl.question("Introduce el numero: ", function(numero) {
     let resultado = factorial(parseInt(numero));
     console.log("factorial: " + resultado);
     rl.close();
+=======
+const readline = require("readline");
+
+function factorial(numero) {
+    let factorial = 1;
+
+    while (numero > 0) {
+        factorial = factorial * numero;
+        numero = numero - 1;
+    }
+
+    return factorial;
+}
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Introduce el numero: ", function(numero) {
+    let resultado = factorial(parseInt(numero));
+    console.log("factorial: " + resultado);
+    rl.close();
+>>>>>>> e743fe212a9fcd97542f7d4020f5df7c494d0a1e
 });
