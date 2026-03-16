@@ -7,7 +7,7 @@
  * El apellido y nombre del autor aparece en el JSDoc y en la llamada.
  *
  * Para correr:
- *   ts-node aritmetica.ts
+ * ts-node aritmetica.ts
  */
 
 import * as readline from "readline";
@@ -125,15 +125,14 @@ function factorialApellidoNombre(n: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 9. VALOR ABSOLUTO — Apellido Nombre
+// 9. VALOR ABSOLUTO — Bellido Zeballos Shawn Brandon
 // ─────────────────────────────────────────────
 /**
  * Retorna el valor absoluto de un número.
- * @author Apellido Nombre
+ * @author Bellido Zeballos Shawn Brandon
  */
-function valorAbsolutoApellidoNombre(n: number): number {
-  // TODO: implementar
-  throw new Error("No implementado aún");
+function valorAbsolutoBellidoZeballosShawnBrandon(n: number): number {
+  return Math.abs(n);
 }
 
 // ─────────────────────────────────────────────
@@ -214,7 +213,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "2": {
         const [a, b] = await pedirDosNumeros();
-        const r = restaApellidoNombre(a, b);
+        const r = restaZeballosRomeroJhoelAndres(a, b);
         console.log(`${a} - ${b} = ${r}`);
         break;
       }
@@ -256,7 +255,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "9": {
         const n = await pedirUnNumero();
-        const r = valorAbsolutoApellidoNombre(n);
+        const r = valorAbsolutoBellidoZeballosShawnBrandon(n);
         console.log(`|${n}| = ${r}`);
         break;
       }
