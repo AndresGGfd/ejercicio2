@@ -37,14 +37,14 @@ function sumaApellidoNombre(a: number, b: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 2. RESTA — Apellido Nombre
+// 2. RESTA — Zeballos Romero Jhoel Andres 
 // ─────────────────────────────────────────────
 /**
  * Retorna la resta de dos números (a - b).
- * @author Apellido Nombre
+ * @author Zeballos Romero Jhoel Andres 
  */
-function restaApellidoNombre(a: number, b: number): number {
-  // TODO: implementar
+function restaZeballosRomeroJhoelAndres(a: number, b: number): number {
+  return a - b;
   throw new Error("No implementado aún");
 }
 
