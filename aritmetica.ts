@@ -25,13 +25,13 @@ const pregunta = (texto: string): Promise<string> =>
   new Promise((resolve) => rl.question(texto, resolve));
 
 // ─────────────────────────────────────────────
-// 1. SUMA — Apellido Nombre
+// 1. SUMA — Zurita Zelada Briza
 // ─────────────────────────────────────────────
 /**
  * Retorna la suma de dos números.
- * @author Apellido Nombre
+ * @author Zurita Zelada Briza
  */
-function sumaApellidoNombre(a: number, b: number): number {
+function sumaZuritaZeladaBriza(a: number, b: number): number {
   return a + b;
 }
 
@@ -47,28 +47,28 @@ function restaZeballosRomeroJhoelAndres(a: number, b: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 3. MULTIPLICACIÓN — Apellido Nombre
+// 3. MULTIPLICACIÓN — Jimenez Quinteros Israel
 // ─────────────────────────────────────────────
 /**
  * Retorna el producto de dos números.
- * @author Apellido Nombre
+ * @author Jimenez quinteros Israel
  */
-function multiplicacionApellidoNombre(a: number, b: number): number {
+function multiplicacionJimenezQuinterosIsrael(a: number, b: number): number {
   return a * b;
 }
 
 // ─────────────────────────────────────────────
-// 4. DIVISIÓN — Apellido Nombre
+// 4. DIVISIÓN — Quiroz Quiroz Giovani
 // ─────────────────────────────────────────────
 /**
  * Retorna el cociente de dos números (a / b).
  * Lanza un error si b es 0.
- * @author Apellido Nombre
+ * @author Quiroz Quiroz Giovani
  */
-function divisionApellidoNombre(a: number, b: number): number {
-  if (b === 0) throw new Error("No se puede dividir por cero.");
-  return a / b;
-}
+function divisionQuirozQuirozGiovani(a: number, b: number): number {
+  if (b == 0) throw new Error("No se puede dividir por cero.");
+    return a / b;
+  }
 
 // ─────────────────────────────────────────────
 // 5. POTENCIA — Perez Tapia Adrian
@@ -83,48 +83,45 @@ function potenciaPerezTapiaAdrian(base: number, exponente: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 6. RAÍZ CUADRADA — Apellido Nombre
+// 6. RAÍZ CUADRADA — Romero Menacho Esther
 // ─────────────────────────────────────────────
 /**
  * Retorna la raíz cuadrada de un número.
  * Lanza un error si n es negativo.
- * @author Apellido Nombre
+ * @author Romero Menacho Esther
  */
-function raizCuadradaApellidoNombre(n: number): number {
-  if (n < 0) throw new Error("No se puede calcular la raíz cuadrada de un número negativo.");
-  return Math.sqrt(n);
+function raizCuadradaRomeroMenachoEsther(n: number): number {
+  if (n < 0) {
+    throw new Error("No se puede calcular la raíz cuadrada de un número negativo.");
+  }
+    return Math.sqrt(n);
 }
 
 // ─────────────────────────────────────────────
-// 7. MÓDULO — Apellido Nombre
+// 7. MÓDULO — Rojas Reque Mireya Edly
 // ─────────────────────────────────────────────
 /**
  * Retorna el resto de la división entera (a % b).
  * Lanza un error si b es 0.
- * @author Apellido Nombre
+ * @author Rojas Reque Mireya Edly
  */
-function moduloApellidoNombre(a: number, b: number): number {
-  if (b === 0) throw new Error("No se puede calcular el módulo con divisor cero.");
+function moduloRojasRequeMireyaEdly(a: number, b: number): number {
+  if (b === 0) throw new Error("No se puede calcular el módulo con divisor 0.");
   return a % b;
 }
 
 // ─────────────────────────────────────────────
-// 8. FACTORIAL — Apellido Nombre
+// 8. FACTORIAL — Heredia Villanueva Eliot
 // ─────────────────────────────────────────────
-/**
- * Retorna el factorial de n (n!).
- * Solo acepta enteros no negativos.
- * @author Apellido Nombre
- */
-function factorialApellidoNombre(n: number): number {
-  if (!Number.isInteger(n)) throw new Error("El factorial solo se define para números enteros.");
-  if (n < 0) throw new Error("El factorial no se define para números negativos.");
-  if (n === 0 || n === 1) return 1;
-  let resultado = 1;
-  for (let i = 2; i <= n; i++) {
-    resultado *= i;
-  }
-  return resultado;
+function factorial_HerediaVillanuevaEliot(number: number): number {
+    let factorial = 1;
+
+    while (number > 0) {
+        factorial = factorial * number;
+        number = number - 1;
+    }
+
+    return factorial;
 }
 
 // ─────────────────────────────────────────────
@@ -139,16 +136,18 @@ function valorAbsolutoBellidoZeballosShawnBrandon(n: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 10. PROMEDIO — Apellido Nombre
+// 10. PROMEDIO — Massi Geronimo Miguel Angel
 // ─────────────────────────────────────────────
 /**
  * Retorna el promedio aritmético de una lista de números.
  * Lanza un error si la lista está vacía.
- * @author Apellido Nombre
+ * @author Massi Geronimo Miguel Angel
  */
-function promedioApellidoNombre(numeros: number[]): number {
-  if (numeros.length === 0) throw new Error("No se puede calcular el promedio de una lista vacía.");
-  const suma = numeros.reduce((acc, num) => acc + num, 0);
+function promedioMassiGeronimoMiguelAngel(numeros: number[]): number {
+  if (numeros.length === 0) {
+    throw new Error("La lista no puede estar vacía.");
+  }
+  const suma = numeros.reduce((acc, curr) => acc + curr, 0);
   return suma / numeros.length;
 }
 
@@ -211,7 +210,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
 
       case "1": {
         const [a, b] = await pedirDosNumeros();
-        const r = sumaApellidoNombre(a, b);
+        const r = sumaZuritaZeladaBriza(a, b);
         console.log(`${a} + ${b} = ${r}`);
         break;
       }
@@ -223,13 +222,13 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "3": {
         const [a, b] = await pedirDosNumeros();
-        const r = multiplicacionApellidoNombre(a, b);
+        const r = multiplicacionJimenezQuinterosIsrael(a, b);
         console.log(`${a} × ${b} = ${r}`);
         break;
       }
       case "4": {
         const [a, b] = await pedirDosNumeros();
-        const r = divisionApellidoNombre(a, b);
+        const r = divisionQuirozQuirozGiovani(a, b);
         console.log(`${a} ÷ ${b} = ${r}`);
         break;
       }
@@ -241,19 +240,19 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "6": {
         const n = await pedirUnNumero();
-        const r = raizCuadradaApellidoNombre(n);
+        const r = raizCuadradaRomeroMenachoEsther(n);
         console.log(`√${n} = ${r}`);
         break;
       }
       case "7": {
         const [a, b] = await pedirDosNumeros();
-        const r = moduloApellidoNombre(a, b);
+        const r = moduloRojasRequeMireyaEdly(a, b);        
         console.log(`${a} % ${b} = ${r}`);
         break;
       }
       case "8": {
         const n = await pedirUnNumero();
-        const r = factorialApellidoNombre(n);
+        const r = factorial_HerediaVillanuevaEliot(n);
         console.log(`${n}! = ${r}`);
         break;
       }
@@ -264,8 +263,24 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
         break;
       }
       case "10": {
-        const nums = await pedirVariosNumeros();
-        const r = promedioApellidoNombre(nums);
+        const cantidadStr = await pregunta("  ¿Cuántos números deseas promediar? (máximo 30): ");
+        const cantidad = Number(cantidadStr.trim());
+        if (isNaN(cantidad) || cantidad <= 0 || !Number.isInteger(cantidad)) {
+          throw new Error("La cantidad debe ser un número entero mayor a 0.");
+        }
+        if (cantidad > 30) {
+          throw new Error("El límite máximo es de 30 números.");
+        }
+        const nums: number[] = [];
+        for (let i = 1; i <= cantidad; i++) {
+          const inputNum = await pregunta(`  Ingresa el número ${i}: `);
+          const n = Number(inputNum.trim());
+          if (isNaN(n)) {
+            throw new Error(`Entrada inválida. "${inputNum}" no es un número.`);
+          }
+          nums.push(n);
+        }
+        const r = promedioMassiGeronimoMiguelAngel(nums);
         console.log(`Promedio de [${nums.join(", ")}] = ${r}`);
         break;
       }
