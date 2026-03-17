@@ -264,13 +264,13 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
         break;
       }
       case "10": {
-        const cantidadStr = await pregunta("  ¿Cuántos números deseas promediar? (máximo 20): ");
+        const cantidadStr = await pregunta("  ¿Cuántos números deseas promediar? (máximo 30): ");
         const cantidad = Number(cantidadStr.trim());
         if (isNaN(cantidad) || cantidad <= 0 || !Number.isInteger(cantidad)) {
           throw new Error("La cantidad debe ser un número entero mayor a 0.");
         }
-        if (cantidad > 20) {
-          throw new Error("El límite máximo es de 20 números.");
+        if (cantidad > 30) {
+          throw new Error("El límite máximo es de 30 números.");
         }
         const nums: number[] = [];
         for (let i = 1; i <= cantidad; i++) {
