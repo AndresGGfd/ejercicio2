@@ -32,8 +32,7 @@ const pregunta = (texto: string): Promise<string> =>
  * @author Apellido Nombre
  */
 function sumaApellidoNombre(a: number, b: number): number {
-  // TODO: implementar
-  throw new Error("No implementado aún");
+  return a + b;
 }
 
 // ─────────────────────────────────────────────
@@ -45,7 +44,6 @@ function sumaApellidoNombre(a: number, b: number): number {
  */
 function restaZeballosRomeroJhoelAndres(a: number, b: number): number {
   return a - b;
-  throw new Error("No implementado aún");
 }
 
 // ─────────────────────────────────────────────
@@ -56,8 +54,7 @@ function restaZeballosRomeroJhoelAndres(a: number, b: number): number {
  * @author Apellido Nombre
  */
 function multiplicacionApellidoNombre(a: number, b: number): number {
-  // TODO: implementar
-  throw new Error("No implementado aún");
+  return a * b;
 }
 
 // ─────────────────────────────────────────────
@@ -69,8 +66,8 @@ function multiplicacionApellidoNombre(a: number, b: number): number {
  * @author Apellido Nombre
  */
 function divisionApellidoNombre(a: number, b: number): number {
-  // TODO: implementar (incluir validación de división por cero)
-  throw new Error("No implementado aún");
+  if (b === 0) throw new Error("No se puede dividir por cero.");
+  return a / b;
 }
 
 // ─────────────────────────────────────────────
@@ -94,8 +91,8 @@ function potenciaPerezTapiaAdrian(base: number, exponente: number): number {
  * @author Apellido Nombre
  */
 function raizCuadradaApellidoNombre(n: number): number {
-  // TODO: implementar (incluir validación de número negativo)
-  throw new Error("No implementado aún");
+  if (n < 0) throw new Error("No se puede calcular la raíz cuadrada de un número negativo.");
+  return Math.sqrt(n);
 }
 
 // ─────────────────────────────────────────────
@@ -107,8 +104,8 @@ function raizCuadradaApellidoNombre(n: number): number {
  * @author Apellido Nombre
  */
 function moduloApellidoNombre(a: number, b: number): number {
-  // TODO: implementar (incluir validación de división por cero)
-  throw new Error("No implementado aún");
+  if (b === 0) throw new Error("No se puede calcular el módulo con divisor cero.");
+  return a % b;
 }
 
 // ─────────────────────────────────────────────
@@ -120,8 +117,14 @@ function moduloApellidoNombre(a: number, b: number): number {
  * @author Apellido Nombre
  */
 function factorialApellidoNombre(n: number): number {
-  // TODO: implementar (incluir validación: n debe ser entero >= 0)
-  throw new Error("No implementado aún");
+  if (!Number.isInteger(n)) throw new Error("El factorial solo se define para números enteros.");
+  if (n < 0) throw new Error("El factorial no se define para números negativos.");
+  if (n === 0 || n === 1) return 1;
+  let resultado = 1;
+  for (let i = 2; i <= n; i++) {
+    resultado *= i;
+  }
+  return resultado;
 }
 
 // ─────────────────────────────────────────────
@@ -144,8 +147,9 @@ function valorAbsolutoBellidoZeballosShawnBrandon(n: number): number {
  * @author Apellido Nombre
  */
 function promedioApellidoNombre(numeros: number[]): number {
-  // TODO: implementar (incluir validación de lista vacía)
-  throw new Error("No implementado aún");
+  if (numeros.length === 0) throw new Error("No se puede calcular el promedio de una lista vacía.");
+  const suma = numeros.reduce((acc, num) => acc + num, 0);
+  return suma / numeros.length;
 }
 
 // ─────────────────────────────────────────────
