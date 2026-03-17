@@ -45,7 +45,6 @@ function sumaApellidoNombre(a: number, b: number): number {
  */
 function restaZeballosRomeroJhoelAndres(a: number, b: number): number {
   return a - b;
-  throw new Error("No implementado aún");
 }
 
 // ─────────────────────────────────────────────
@@ -61,17 +60,17 @@ function multiplicacionApellidoNombre(a: number, b: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 4. DIVISIÓN — Apellido Nombre
+// 4. DIVISIÓN — Quiroz Quiroz Giovani
 // ─────────────────────────────────────────────
 /**
  * Retorna el cociente de dos números (a / b).
  * Lanza un error si b es 0.
- * @author Apellido Nombre
+ * @author Quiroz Quiroz Giovani
  */
-function divisionApellidoNombre(a: number, b: number): number {
-  // TODO: implementar (incluir validación de división por cero)
-  throw new Error("No implementado aún");
-}
+function divisionQuirozQuirozGiovani(a: number, b: number): number {
+  if (b == 0) throw new Error("No se puede dividir por cero.");
+    return a / b;
+  }
 
 // ─────────────────────────────────────────────
 // 5. POTENCIA — Perez Tapia Adrian
@@ -225,7 +224,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "4": {
         const [a, b] = await pedirDosNumeros();
-        const r = divisionApellidoNombre(a, b);
+        const r = divisionQuirozQuirozGiovani(a, b);
         console.log(`${a} ÷ ${b} = ${r}`);
         break;
       }
