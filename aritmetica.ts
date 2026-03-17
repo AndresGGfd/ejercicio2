@@ -112,16 +112,17 @@ function moduloApellidoNombre(a: number, b: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 8. FACTORIAL — Apellido Nombre
+// 8. FACTORIAL — Heredia Villanueva Eliot
 // ─────────────────────────────────────────────
-/**
- * Retorna el factorial de n (n!).
- * Solo acepta enteros no negativos.
- * @author Apellido Nombre
- */
-function factorialApellidoNombre(n: number): number {
-  // TODO: implementar (incluir validación: n debe ser entero >= 0)
-  throw new Error("No implementado aún");
+function factorial_HerediaVillanuevaEliot(number) {
+    let factorial = 1;
+
+    while (number > 0) {
+        factorial = factorial * number;
+        number = number - 1;
+    }
+
+    return factorial;
 }
 
 // ─────────────────────────────────────────────
@@ -250,7 +251,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "8": {
         const n = await pedirUnNumero();
-        const r = factorialApellidoNombre(n);
+        const r = factorial_HerediaVillanuevaEliot(n);
         console.log(`${n}! = ${r}`);
         break;
       }
