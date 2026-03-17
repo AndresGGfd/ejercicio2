@@ -33,7 +33,6 @@ const pregunta = (texto: string): Promise<string> =>
  */
 function sumaZuritaZeladaBriza(a: number, b: number): number {
   return a + b;
-  throw new Error("No implementado aún");
 }
 
 // ─────────────────────────────────────────────
@@ -48,15 +47,14 @@ function restaZeballosRomeroJhoelAndres(a: number, b: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 3. MULTIPLICACIÓN — Apellido Nombre
+// 3. MULTIPLICACIÓN — Jimenez Quinteros Israel
 // ─────────────────────────────────────────────
 /**
  * Retorna el producto de dos números.
- * @author Apellido Nombre
+ * @author Jimenez quinteros Israel
  */
-function multiplicacionApellidoNombre(a: number, b: number): number {
-  // TODO: implementar
-  throw new Error("No implementado aún");
+function multiplicacionJimenezQuinterosIsrael(a: number, b: number): number {
+  return a * b;
 }
 
 // ─────────────────────────────────────────────
@@ -115,7 +113,7 @@ function moduloRojasRequeMireyaEdly(a: number, b: number): number {
 // ─────────────────────────────────────────────
 // 8. FACTORIAL — Heredia Villanueva Eliot
 // ─────────────────────────────────────────────
-function factorial_HerediaVillanuevaEliot(number) {
+function factorial_HerediaVillanuevaEliot(number: number): number {
     let factorial = 1;
 
     while (number > 0) {
@@ -224,7 +222,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "3": {
         const [a, b] = await pedirDosNumeros();
-        const r = multiplicacionApellidoNombre(a, b);
+        const r = multiplicacionJimenezQuinterosIsrael(a, b);
         console.log(`${a} × ${b} = ${r}`);
         break;
       }
