@@ -101,16 +101,16 @@ function raizCuadradaRomeroMenachoEsther(n: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 7. MÓDULO — Apellido Nombre
+// 7. MÓDULO — Rojas Reque Mireya Edly
 // ─────────────────────────────────────────────
 /**
  * Retorna el resto de la división entera (a % b).
  * Lanza un error si b es 0.
- * @author Apellido Nombre
+ * @author Rojas Reque Mireya Edly
  */
-function moduloApellidoNombre(a: number, b: number): number {
-  // TODO: implementar (incluir validación de división por cero)
-  throw new Error("No implementado aún");
+function moduloRojasRequeMireyaEdly(a: number, b: number): number {
+  if (b === 0) throw new Error("No se puede calcular el módulo con divisor 0.");
+  return a % b;
 }
 
 // ─────────────────────────────────────────────
@@ -248,7 +248,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "7": {
         const [a, b] = await pedirDosNumeros();
-        const r = moduloApellidoNombre(a, b);
+        const r = moduloRojasRequeMireyaEdly(a, b);        
         console.log(`${a} % ${b} = ${r}`);
         break;
       }
