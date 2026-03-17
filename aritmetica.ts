@@ -138,16 +138,19 @@ function valorAbsolutoBellidoZeballosShawnBrandon(n: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 10. PROMEDIO — Apellido Nombre
+// 10. PROMEDIO — Massi Geronimo Miguel Angel
 // ─────────────────────────────────────────────
 /**
  * Retorna el promedio aritmético de una lista de números.
  * Lanza un error si la lista está vacía.
- * @author Apellido Nombre
+ * @author Massi Geronimo Miguel Angel
  */
-function promedioApellidoNombre(numeros: number[]): number {
-  // TODO: implementar (incluir validación de lista vacía)
-  throw new Error("No implementado aún");
+function promedioMassiGeronimoMiguelAngel(numeros: number[]): number {
+  if (numeros.length === 0) {
+    throw new Error("La lista no puede estar vacía.");
+  }
+  const suma = numeros.reduce((acc, curr) => acc + curr, 0);
+  return suma / numeros.length;
 }
 
 // ─────────────────────────────────────────────
@@ -262,8 +265,24 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
         break;
       }
       case "10": {
-        const nums = await pedirVariosNumeros();
-        const r = promedioApellidoNombre(nums);
+        const cantidadStr = await pregunta("  ¿Cuántos números deseas promediar? (máximo 20): ");
+        const cantidad = Number(cantidadStr.trim());
+        if (isNaN(cantidad) || cantidad <= 0 || !Number.isInteger(cantidad)) {
+          throw new Error("La cantidad debe ser un número entero mayor a 0.");
+        }
+        if (cantidad > 20) {
+          throw new Error("El límite máximo es de 20 números.");
+        }
+        const nums: number[] = [];
+        for (let i = 1; i <= cantidad; i++) {
+          const inputNum = await pregunta(`  Ingresa el número ${i}: `);
+          const n = Number(inputNum.trim());
+          if (isNaN(n)) {
+            throw new Error(`Entrada inválida. "${inputNum}" no es un número.`);
+          }
+          nums.push(n);
+        }
+        const r = promedioMassiGeronimoMiguelAngel(nums);
         console.log(`Promedio de [${nums.join(", ")}] = ${r}`);
         break;
       }
