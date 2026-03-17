@@ -25,14 +25,14 @@ const pregunta = (texto: string): Promise<string> =>
   new Promise((resolve) => rl.question(texto, resolve));
 
 // ─────────────────────────────────────────────
-// 1. SUMA — Apellido Nombre
+// 1. SUMA — Zurita Zelada Briza
 // ─────────────────────────────────────────────
 /**
  * Retorna la suma de dos números.
- * @author Apellido Nombre
+ * @author Zurita Zelada Briza
  */
-function sumaApellidoNombre(a: number, b: number): number {
-  // TODO: implementar
+function sumaZuritaZeladaBriza(a: number, b: number): number {
+  return a + b;
   throw new Error("No implementado aún");
 }
 
@@ -211,7 +211,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
 
       case "1": {
         const [a, b] = await pedirDosNumeros();
-        const r = sumaApellidoNombre(a, b);
+        const r = sumaZuritaZeladaBriza(a, b);
         console.log(`${a} + ${b} = ${r}`);
         break;
       }
