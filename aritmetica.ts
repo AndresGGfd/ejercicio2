@@ -86,16 +86,18 @@ function potenciaPerezTapiaAdrian(base: number, exponente: number): number {
 }
 
 // ─────────────────────────────────────────────
-// 6. RAÍZ CUADRADA — Apellido Nombre
+// 6. RAÍZ CUADRADA — Romero Menacho Esther
 // ─────────────────────────────────────────────
 /**
  * Retorna la raíz cuadrada de un número.
  * Lanza un error si n es negativo.
- * @author Apellido Nombre
+ * @author Romero Menacho Esther
  */
-function raizCuadradaApellidoNombre(n: number): number {
-  // TODO: implementar (incluir validación de número negativo)
-  throw new Error("No implementado aún");
+function raizCuadradaRomeroMenachoEsther(n: number): number {
+  if (n < 0) {
+    throw new Error("No se puede calcular la raíz cuadrada de un número negativo.");
+  }
+    return Math.sqrt(n);
 }
 
 // ─────────────────────────────────────────────
@@ -237,7 +239,7 @@ async function ejecutarOpcion(opcion: string): Promise<boolean> {
       }
       case "6": {
         const n = await pedirUnNumero();
-        const r = raizCuadradaApellidoNombre(n);
+        const r = raizCuadradaRomeroMenachoEsther(n);
         console.log(`√${n} = ${r}`);
         break;
       }
